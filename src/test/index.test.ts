@@ -3,7 +3,7 @@ import {
   generateHash,
   generateBase64String,
   generateUint8Array,
-} from "../generators";
+} from "..";
 
 describe("generateHexString", () => {
   it("generates string of correct length", () => {
