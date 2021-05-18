@@ -8,7 +8,7 @@
 1. test-generators: `npm install`
 2. test-generators: `npm run build`
 3. test-generators: `npm link`
-4. In other project: `npm link @unfinishedlabs/test-generators`
+4. In other project: `npm link @dsnp/test-generators`
 5. The other project now uses the test-generators folder as the node_modules folder
 6. test-generators: `npm run watch`
 
