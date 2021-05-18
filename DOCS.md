@@ -6,9 +6,8 @@ See [README](https://github.com/LibertyDSNP/test-generators/)
 
 ## Quick Start
 
-- `npm install @unfinishedlabs/test-generators`
+- `npm install @dsnp/test-generators`
 - Import:
-  - `import * as generators from "@unfinishedlabs/test-generators";`
+  - `import * as generators from "@dsnp/test-generators";`
 - Require:
-  - `const generators = require("@unfinishedlabs/test-generators");`
-
+  - `const generators = require("@dsnp/test-generators");`

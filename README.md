@@ -4,15 +4,15 @@ A library of random generators for cryptographic types to ease test development.
 
 ## Quick Start
 
-- `npm install @unfinishedlabs/test-generators`
+- `npm install @dsnp/test-generators`
 - Import:
-  - `import * as generators from "@unfinishedlabs/test-generators";`
+  - `import * as generators from "@dsnp/test-generators";`
 - Require:
-  - `const generators = require("@unfinishedlabs/test-generators");`
+  - `const generators = require("@dsnp/test-generators");`
 
 ## How to Install
 
-Run `npm install @unfinishedlabs/test-generators`
+Run `npm install @dsnp/test-generators`
 
 ## How to Build
 
