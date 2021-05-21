@@ -3,7 +3,16 @@ import {
   generateHash,
   generateBase64String,
   generateUint8Array,
+  sampleStr,
+  sampleNum,
 } from "..";
+
+import {
+  prefabURLs,
+  prefabLastNames,
+  prefabFirstNames,
+  prefabMessages,
+} from "../sampleText";
 
 describe("generateHexString", () => {
   it("generates string of correct length", () => {
@@ -54,5 +63,36 @@ describe("generateUint8Array", () => {
     const length = 103;
     const ba = generateUint8Array(length);
     expect(ba.length).toBe(length);
+  });
+});
+
+describe("samplers", () => {
+  it("sampleStr works correctly", () => {
+    const list = ["Say", "hey", "Kid"];
+    const res = sampleStr(list);
+    expect(list.indexOf(res)).toBeGreaterThan(-1);
+    expect(() => sampleStr([])).toThrow("cannot sample from an empty list");
+  });
+
+  it("sampleNum works correctly", () => {
+    const list = [99, 66, 9696];
+    const res = sampleNum(list);
+    expect(list.indexOf(res)).toBeGreaterThan(-1);
+    expect(() => sampleNum([])).toThrow("cannot sample from an empty list");
+  });
+
+  describe("can use the prefab lists", () => {
+    [
+      { name: "prefabURLs", list: prefabURLs },
+      { name: "prefabLastNames", list: prefabLastNames },
+      { name: "prefabFirstNames", list: prefabFirstNames },
+      { name: "prefabMessages", list: prefabMessages },
+    ].forEach((tc) => {
+      let res = "";
+      it(`${tc.name} is accessible`, () => {
+        res = sampleStr(tc.list);
+        expect(tc.list.indexOf(res)).toBeGreaterThan(-1);
+      });
+    });
   });
 });
