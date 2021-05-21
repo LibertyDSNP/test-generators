@@ -119,3 +119,21 @@ export const prefabURLs = [
   "https://media.istockphoto.com/photos/bengal-kitten-in-flower-meadow-picture-id905117504?b=1&k=6&m=905117504&s=612x612&w=0&h=wN_f34X4QvADggBid_58qUCgrOU8oE9SuLWwgP0IKgE=",
   "https://www.theactuary.com/sites/default/files/images/121912_1.jpg",
 ];
+
+// Family-friendly selection of different music and dance from around the world
+export const prefabVideos = [
+  "https://youtu.be/ZYBliPhLAE0",
+  "https://vimeo.com/25436623",
+  "https://www.youtube.com/watch?v=6r7TqPNxhrM",
+  "https://vimeo.com/479212171",
+  "https://www.youtube.com/watch?v=k_IAH7D-vTI",
+  "https://www.youtube.com/watch?v=AVoHlghb0CM",
+  "https://www.facebook.com/geetgandhar/videos/941987132933178/",
+  "https://www.youtube.com/watch?v=ywWBy6J5gz8",
+  "https://www.youtube.com/watch?v=Ns4TPTC8whw",
+  "https://www.youtube.com/watch?v=lyZQPjUT5B4",
+  "https://www.youtube.com/watch?v=ROalU379l3U",
+  "https://www.youtube.com/watch?v=XaqR3G_NVoo",
+  "https://www.youtube.com/watch?v=iP897Z5Nerk",
+  "https://www.youtube.com/watch?v=CmPA7zE8mx0",
+];
