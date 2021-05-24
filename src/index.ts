@@ -1,4 +1,4 @@
-import { HexString } from "./types/index";
+import { HexString } from "./types";
 
 /**
  * Generate a randomized hex string of a specific length prefixed by `0x`
@@ -47,4 +47,17 @@ export const generateBase64String = (length: number): string => {
  */
 export const randInt = (max: number): number => {
   return Math.floor(Math.random() * Math.floor(max));
+};
+
+/**
+ * These two sample functions are wrappers for lodash sample, which can
+ * return undefined. These are guaranteed never to return undefined.
+ * @param fromList
+ */
+export const sample = <T>(fromList: Array<T>): T => {
+  if (fromList.length === 0) {
+    throw new Error("cannot sample from an empty list");
+  }
+
+  return fromList[Math.floor(Math.random() * fromList.length)];
 };
