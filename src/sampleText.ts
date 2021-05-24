@@ -2,24 +2,42 @@
  * Array of prefabricated first names for use in creating profiles
  */
 export const prefabFirstNames = [
+  "Arna",
   "Tom",
+  "安",
+  "계향",
+  "Ang",
+  "Ahsha",
+  "Alva",
   "Bob",
-  "Scott",
+  "Bai",
+  "Eskil",
+  "Bhuvana",
+  "Fatima",
   "Duncan",
   "Frank",
   "Elvis",
+  "Goins",
   "Josh",
-  "Kevin",
+  "Лев Николаевич",
+  "Mireille",
   "Cathy",
-  "Karen",
+  "Hamza",
+  "Davonte",
+  "Petru",
+  "Inigo",
+  "Norbert",
   "Mary",
   "Beth",
-  "Sheril",
-  "Mackenzie",
+  "Devorah",
+  "Marisol",
+  "Tala",
   "Katie",
   "Sarah",
+  "Srikanth",
   "Elizabeth",
   "Maria",
+  "Vállju",
 ];
 
 /**
@@ -28,20 +46,33 @@ export const prefabFirstNames = [
 export const prefabLastNames = [
   "Smith",
   "Peterson",
+  "Dalisay",
   "Sullivan",
   "Myers",
+  "Franklin, Jr.",
+  "Fudduni",
+  "Grímsdóttir",
+  "Khaldun",
   "Cooper",
+  "Poitier",
   "Williams",
-  "Carter",
-  "Young",
+  "Kotter",
+  "Kaur",
+  "Jung",
   "Morgan",
-  "King",
-  "Ward",
+  "Begay",
+  "Li",
+  "장",
+  "Montoya",
+  "Greenberg",
+  "Hämäläinen",
   "Foster",
-  "Evans",
-  "Davis",
-  "Turner",
+  "Ng",
+  "Srinivasan",
+  "Толстой",
+  "Boudreau",
   "Sanchez",
+  "正文",
 ];
 
 /**
@@ -86,7 +117,7 @@ export const prefabMessages = [
   "Sometimes life is like this dark tunnel. You can’t always " +
     "see the light at the end of the tunnel, but if you just " +
     "keep moving, you will come to a better place.",
-  // The Tradegdy of Dark Plagueis the Wise
+  // The Tragedy of Dark Plagueis the Wise
   "Did you ever hear the tragedy of Darth Plagueis the Wise? " +
     "I thought not. It's not a story the Jedi would tell you. " +
     "It's a Sith legend. Darth Plagueis was a Dark Lord of the " +
