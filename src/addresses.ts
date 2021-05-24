@@ -1,8 +1,6 @@
 import { HexString } from "./types";
 import { generateHexString } from "./index";
 
-const preFabAddr = "1Ff482D42D8727258A1686102Fa4ba925C";
-
 /**
  * Generate a wallet address
  */
@@ -11,21 +9,25 @@ export const generateEthereumAddress = (): HexString => {
 };
 
 /**
- * Get a prefabricated social identity address compatible with other prefab data
- * Prefab social identity address is `0xCODE0000`
+ * Get a semi-random, 40-byte social identity address, where
+ * the last five digits are the zero-padded index provided.
+ * Maximum index is 9999
  */
 export const getPrefabAddress = (index: number): HexString => {
-  return ["0x", preFabAddr, zeroFill(index, 5)].join("");
+  if (index > 10000) throw new Error(`${index} exceeds the maximum 9999`);
+  const addr = generateHexString(35);
+  return [addr, zeroFill(index, 5)].join("");
 };
 
 /**
  * Get up to 10,000 prefabricated addresseses, with index 0-9999
- * @param max
+ * @param numAddrs, the number of addresses to generate
  */
-export const getNPrefabAddresses = (max: number): [HexString] => {
-  if (max > 10000) throw new Error("10,000 is the maximum number of addresses");
+export const getNPrefabAddresses = (numAddrs: number): [HexString] => {
+  if (numAddrs > 10000)
+    throw new Error(`${numAddrs} exceeds the maximum 10,000`);
   const addrs: [HexString] = [getPrefabAddress(0)];
-  for (let i = 1; i < max; i++) {
+  for (let i = 1; i < numAddrs; i++) {
     addrs.push(getPrefabAddress(i));
   }
   return addrs;

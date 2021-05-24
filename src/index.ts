@@ -1,4 +1,3 @@
-import { sample } from "lodash";
 import { HexString } from "./types";
 
 /**
@@ -59,12 +58,6 @@ export const sample = <T>(fromList: Array<T>): T => {
   if (fromList.length === 0) {
     throw new Error("cannot sample from an empty list");
   }
-  return sample(fromList) || fromList[0];
-};
 
-export const sampleStr = (fromList: Array<string>): string => {
-  if (fromList.length === 0) {
-    throw new Error("cannot sample from an empty list");
-  }
-  return sample(fromList) || "";
+  return fromList[Math.floor(Math.random() * fromList.length)];
 };

@@ -11,19 +11,20 @@ describe("addresses", () => {
     expect(addr).toMatch(/^0x[0-9a-f]+/);
   });
 
-  const baseStr = "0x1Ff482D42D8727258A1686102Fa4ba925C00000";
+  const zeroIndexRegex = /00000$/;
   it("getPrefabAddress works", () => {
-    expect(getPrefabAddress(0)).toEqual(baseStr);
-    expect(getPrefabAddress(1)).toEqual(
-      "0x1Ff482D42D8727258A1686102Fa4ba925C00001"
-    );
-    expect(getPrefabAddress(999)).toEqual(
-      "0x1Ff482D42D8727258A1686102Fa4ba925C00999"
+    const res = getPrefabAddress(0);
+    expect(res).toHaveLength(42);
+    expect(res).toMatch(zeroIndexRegex);
+    expect(getPrefabAddress(999)).toMatch(/00999$/);
+
+    expect(() => getPrefabAddress(3838383)).toThrowError(
+      "3838383 exceeds the maximum 9999"
     );
   });
 
   it("getNPrefabAddresses works", () => {
-    expect(getNPrefabAddresses(1)[0]).toEqual(baseStr);
+    expect(getNPrefabAddresses(1)[0]).toMatch(zeroIndexRegex);
 
     let manyAddrs = getNPrefabAddresses(5);
     expect(manyAddrs).toHaveLength(5);
@@ -32,7 +33,7 @@ describe("addresses", () => {
     expect(manyAddrs).toHaveLength(33);
 
     expect(() => getNPrefabAddresses(3838383)).toThrowError(
-      "10,000 is the maximum number of addresses"
+      "3838383 exceeds the maximum 10,000"
     );
   });
 });
