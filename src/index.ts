@@ -55,7 +55,7 @@ export const randInt = (max: number): number => {
  * return undefined. These are guaranteed never to return undefined.
  * @param fromList
  */
-export const sampleNum = (fromList: Array<number>): number => {
+export const sample = <T>(fromList: Array<T>): T => {
   if (fromList.length === 0) {
     throw new Error("cannot sample from an empty list");
   }
