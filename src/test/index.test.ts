@@ -4,14 +4,8 @@ import {
   generateBase64String,
   generateUint8Array,
   sample,
+  sampleText,
 } from "..";
-
-import {
-  prefabURLs,
-  prefabLastNames,
-  prefabFirstNames,
-  prefabMessages,
-} from "../sampleText";
 
 describe("index tests", () => {
   describe("generateHexString", () => {
@@ -79,10 +73,10 @@ describe("index tests", () => {
 
     describe("can use the prefab lists", () => {
       [
-        { name: "prefabURLs", list: prefabURLs },
-        { name: "prefabLastNames", list: prefabLastNames },
-        { name: "prefabFirstNames", list: prefabFirstNames },
-        { name: "prefabMessages", list: prefabMessages },
+        { name: "prefabURLs", list: sampleText.prefabURLs },
+        { name: "prefabLastNames", list: sampleText.prefabLastNames },
+        { name: "prefabFirstNames", list: sampleText.prefabFirstNames },
+        { name: "prefabMessages", list: sampleText.prefabMessages },
       ].forEach((tc) => {
         let res = "";
         it(`${tc.name} is accessible`, () => {

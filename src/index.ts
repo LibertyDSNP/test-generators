@@ -1,5 +1,10 @@
 import { HexString } from "./types";
 
+import * as sampleTextImport from "./sampleText";
+export const sampleText = sampleTextImport;
+import * as addressesImport from "./addresses";
+export const addresses = addressesImport;
+
 /**
  * Generate a randomized hex string of a specific length prefixed by `0x`
  * @param length The length of the hex string excluding the prefix
