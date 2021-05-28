@@ -1,4 +1,4 @@
-name: Tests CI
+name: Tests
 on:
   push:
     branches: [ main ]
@@ -8,7 +8,7 @@ jobs:
   test:
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout
+      - name: Checkout 🛎️
         uses: actions/checkout@v2
 
       - uses: actions/cache@v2
@@ -23,7 +23,10 @@ jobs:
         with:
           node-version: '14.15.5'
 
-      - name: Install
+      - name: Update npm to v7
+        run: npm i -g npm
+
+      - name: Install 💾
         run: npm ci
 
       - name: Lint

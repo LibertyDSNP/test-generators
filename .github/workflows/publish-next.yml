@@ -5,15 +5,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
 
-      - name: Use Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14.15.5'
-          registry-url: 'https://registry.npmjs.org'
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
 
       - uses: actions/cache@v2
         with:
@@ -22,7 +17,16 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.15.5'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Update npm to v7
+        run: npm i -g npm
+
+      - name: Install 💾
         run: npm ci
 
       - name: Version ⬆️
