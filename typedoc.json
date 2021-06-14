@@ -1,0 +1,309 @@
+{
+	"id": 0,
+	"name": "@dsnp/test-generators",
+	"kind": 0,
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "addresses",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 2,
+					"name": "generateEthereumAddress",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"signatures": [
+						{
+							"id": 3,
+							"name": "generateEthereumAddress",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Generate a wallet address"
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				},
+				{
+					"id": 7,
+					"name": "getNPrefabAddresses",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"signatures": [
+						{
+							"id": 8,
+							"name": "getNPrefabAddresses",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Get up to 10,000 prefabricated addresseses, with index 0-9999"
+							},
+							"parameters": [
+								{
+									"id": 9,
+									"name": "numAddrs",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "tuple",
+								"elements": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"id": 4,
+					"name": "getPrefabAddress",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isConst": true
+					},
+					"signatures": [
+						{
+							"id": 5,
+							"name": "getPrefabAddress",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Get a semi-random, 40-byte social identity address, where\nthe last five digits are the zero-padded index provided.\nMaximum index is 9999"
+							},
+							"parameters": [
+								{
+									"id": 6,
+									"name": "index",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						2,
+						7,
+						4
+					]
+				}
+			]
+		},
+		{
+			"id": 10,
+			"name": "sampleText",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 11,
+					"name": "prefabFirstNames",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "Array of prefabricated first names for use in creating profiles"
+					},
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 12,
+					"name": "prefabLastNames",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "Array of prefabricated last names for use in creating profiles"
+					},
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 14,
+					"name": "prefabMessages",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "An array of prefabricated messages for use in testing content posts."
+					},
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 15,
+					"name": "prefabURLs",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 16,
+					"name": "prefabVideos",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 13,
+					"name": "randImage",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "Generates a different picture everytime"
+					},
+					"type": {
+						"type": "literal",
+						"value": "https://picsum.photos/200/300"
+					},
+					"defaultValue": "\"https://picsum.photos/200/300\""
+				}
+			],
+			"groups": [
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						11,
+						12,
+						14,
+						15,
+						16,
+						13
+					]
+				}
+			]
+		},
+		{
+			"id": 17,
+			"name": "types",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 18,
+					"name": "HexString",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						18
+					]
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 1,
+			"children": [
+				1,
+				10,
+				17
+			]
+		}
+	]
+}
