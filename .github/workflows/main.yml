@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -21,10 +21,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '14.15.5'
-
-      - name: Update npm to v7
-        run: npm i -g npm
+          node-version: 16
 
       - name: Install 💾
         run: npm ci
@@ -42,7 +39,7 @@ jobs:
         run: npm run test
 
       - name: Report Test
-        uses: IgnusG/jest-report-action@v2.3.3
+        uses: IgnusG/jest-report-action@e6a7ecec78c18dce603190cf17992c123ac260ae
         if: always()
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
